@@ -1,4 +1,4 @@
-method: random
+method: grid
 # grid, random, baysianから選択
 metric:
   goal: minimize
@@ -10,7 +10,7 @@ parameters:
     #max: 512
     #min: 64
   epochs:
-    values: [20]
+    values: [20, 40, 60, 80, 100]
     #distribution: int_uniform
     #max: 200
     #min: 50
@@ -19,4 +19,5 @@ parameters:
     #distribution: uniform
     #max: 0.1
     #min: 0.025
-program: saitan8_wandb_sweep.ipynb
+  n_hidden1:
+    values: [32, 64, 128, 256, 512]
