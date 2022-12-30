@@ -1,23 +1,25 @@
-method: grid
-# grid, random, baysianから選択
+method: random
+# grid, random, bayesから選択
+#bayesの場合, metricを記述
 metric:
-  goal: minimize
   name: test_acc
+  goal: minimize
+# goal:Maximize, Minimize, Targetから選択
 parameters:
   batch_size:
-    values: [256, 128, 64, 32]
-    #distribution: int_uniform
-    #max: 512
-    #min: 64
+    values: [32, 128, 256]
   epochs:
-    values: [20, 40, 60, 80, 100]
-    #distribution: int_uniform
-    #max: 200
-    #min: 50
+    values: [20, 60, 100]
   learning_rate:
-    values: [0.001, 0.005, 0.01, 0.05, 0.1]
-    #distribution: uniform
-    #max: 0.1
-    #min: 0.025
+    values: [0.001, 0.01, 0.05]
   n_hidden1:
-    values: [32, 64, 128, 256, 512]
+    values: [32, 128, 256]
+  n_hidden2:
+    values: [32, 128, 256]
+  optimizer:
+    values: ["SDG", "Adam"]
+  Net:
+    values: ["Net1", "Net2"]
+    #distribution: int_uniform
+      #max: 512
+      #min: 64
