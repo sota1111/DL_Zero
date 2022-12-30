@@ -1,2 +1,4 @@
 saitan/pythonlibs*
 saitan/data*
+saitan/wandb*
+data/MNIST*
