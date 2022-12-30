@@ -1,0 +1,18 @@
+method: bayes
+metric:
+  goal: minimize
+  name: Relative Time (Process)
+parameters:
+  batch_size:
+    distribution: int_uniform
+    max: 512
+    min: 64
+  epochs:
+    distribution: int_uniform
+    max: 200
+    min: 50
+  learning_rate:
+    distribution: uniform
+    max: 0.1
+    min: 0.025
+program: train.py
