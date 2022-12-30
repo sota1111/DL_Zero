@@ -1,18 +1,22 @@
-method: bayes
+method: random
+# grid, random, baysianから選択
 metric:
   goal: minimize
-  name: Relative Time (Process)
+  name: test_acc
 parameters:
   batch_size:
-    distribution: int_uniform
-    max: 512
-    min: 64
+    values: [256, 128, 64, 32]
+    #distribution: int_uniform
+    #max: 512
+    #min: 64
   epochs:
-    distribution: int_uniform
-    max: 200
-    min: 50
+    values: [20]
+    #distribution: int_uniform
+    #max: 200
+    #min: 50
   learning_rate:
-    distribution: uniform
-    max: 0.1
-    min: 0.025
-program: train.py
+    values: [0.001, 0.005, 0.01, 0.05, 0.1]
+    #distribution: uniform
+    #max: 0.1
+    #min: 0.025
+program: saitan8_wandb_sweep.ipynb
