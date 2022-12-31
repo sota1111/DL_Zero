@@ -1,7 +1,7 @@
 # Wandb Sweepの使い方
 ## 説明のモチベーション
 Wandbの使い方を説明してる記事が以下くらいしかなく、以下の記事も説明を省略してるので、作成しました。  
-[Qiitaの記事](https://qiita.com/daikiclimate/items/9743976a108ea039bd88)
+[Qiitaの記事](https://qiita.com/daikiclimate/items/9743976a108ea039bd88)  
 ## インストール
 以下のサイトにアクセスして、personalで登録（会社で使う場合は有償）  
 https://wandb.ai/home
@@ -67,4 +67,6 @@ Methodには３つの選択肢があり、randomで範囲を絞り、gridやbaye
 最初は関数化することを念頭においてなかったので、下手なコードです。。。
 https://github.com/sota1111/DL_Zero/blob/main/saitan/saitan8_wandb_sweep.ipynb
 
-
+## 参考サイト
+[公式ドキュメント](https://docs.wandb.ai/)  
+[公式サンプルコード](https://github.com/wandb/examples)  
