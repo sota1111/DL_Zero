@@ -11,7 +11,7 @@ W&Bは以下の4つのツールがある。
 1. Dashboard（ダッシュボード）: 実験のトラッキングを行います
 2. Artifacts（アーティファクト）: データセットのバージョン管理、モデルのバージョン管理を行います
 3. Sweeps（スイープ）: ハイパーパラメータの最適化を行います
-4. Reports（レポート）: 結果を再現可能な状態で保存・共有しま
+4. Reports（レポート）: 結果を再現可能な状態で保存・共有します  
 先に1の機能を説明する
 ## 1. Dashboard（ダッシュボード）
 実験経過を下図のように記録することができる。
@@ -21,11 +21,11 @@ W&Bは以下の4つのツールがある。
 
 数行を追加するだけで実験結果を記録することができる。  
 MNISTで実行するコード  
-https://github.com/sota1111/DL_Zero/blob/main/saitan/mnist_min_dis.ipynb
-上記にWandB機能を埋め込んだコード  
-https://github.com/sota1111/DL_Zero/blob/main/saitan/saitan8_wandb.ipynb
+https://github.com/sota1111/DL_Zero/blob/main/saitan/mnist_min_dis.ipynb  
+上記にWandB機能を埋め込んだコード   
+https://github.com/sota1111/DL_Zero/blob/main/saitan/saitan8_wandb.ipynb  
 
-Dashboardは記録するためのツールであり、どのパラメータが最適化を検討するにはSWEEP機能を用いる。
+Dashboardは記録するためのツールであり、どのパラメータが最適化を検討するにはSWEEP機能を用いる。  
 
 
 ## 3. Sweeps（スイープ）
@@ -47,19 +47,20 @@ Dashboardは記録するためのツールであり、どのパラメータが�
 一層で二層目の隠れ層の影響が判らないので、二層のみにする。左上のフィルタからNet2のみを選択する。
 ![image](https://user-images.githubusercontent.com/97399125/210122539-2262f70d-f5e4-47b9-ac93-2f65c6278745.png)
 一層目の隠れ層の影響が大きいことが判る。  
-最も高い精度となるパラメータを確認する。  
+<br>
+次に、最も高い精度となるパラメータを確認する。  
 ![image](https://user-images.githubusercontent.com/97399125/210122607-bf97c439-d45c-4a03-9ef4-6005b1030b44.png)
 二層、batch_size大、epochs大、隠れ層大となるパラメータが高い精度を取ることを確認できる。  
 隠れ層が大きくない場合でも高スコアを取っていることから、小さいNNを構築するためには左側を固定し、隠れ層を調整する必要があることが判る。  
 ### 使い方
-詳細な使い方は以下のサイトで説明されている。
-https://docs.wandb.ai/guides/sweeps/
-YAMLファイルを用いる場合、以下のように記述する。  
-![image](https://user-images.githubusercontent.com/97399125/210122759-5feef0ee-b588-4a55-aa8b-2bd2df2bd3e1.png)
+詳細な使い方は以下のサイトで説明されている。  
+https://docs.wandb.ai/guides/sweeps/  
+YAMLファイルを用いる場合、以下のように記述する。    
+![image](https://user-images.githubusercontent.com/97399125/210122759-5feef0ee-b588-4a55-aa8b-2bd2df2bd3e1.png)  
 Methodには３つの選択肢があり、randomで範囲を絞り、gridやbayesで最適なパラメータを見つけるのが良いと記述がある。
-![image](https://user-images.githubusercontent.com/97399125/210122786-23cea844-8871-40b3-84a1-0e270667fcf5.png)
+![image](https://user-images.githubusercontent.com/97399125/210122786-23cea844-8871-40b3-84a1-0e270667fcf5.png)  
 パラメータはリストや分散等、様々な振り方をすることできる。（分散にも多くの方法が準備されている。）  
-![image](https://user-images.githubusercontent.com/97399125/210122811-6db702ee-45a6-469c-9069-f77df4742adf.png)
+![image](https://user-images.githubusercontent.com/97399125/210122811-6db702ee-45a6-469c-9069-f77df4742adf.png)  
 ### コード
 上記で紹介した実験結果を取得したコードが以下になります。  
 関数コールバックで記述する必要があり、結構コードを変更しています。  
