@@ -1,0 +1,18 @@
+method: random
+# grid, random, bayesから選択
+#bayesの場合, metricを記述
+metric:
+  name: test_acc
+  goal: minimize
+# goal:Maximize, Minimize, Targetから選択
+parameters:
+  epochs:
+    values: [20, 60, 100]
+  n_hidden1:
+    values: [64, 128, 256]
+  output_channel:
+    values: [16, 32, 64]
+  output_size:
+    values: [16, 32, 64]
+  kernel_size:
+    values: [1, 3, 5, 12]
