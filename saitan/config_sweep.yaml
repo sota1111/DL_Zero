@@ -10,14 +10,15 @@ parameters:
     values: [32, 128, 256]
   epochs:
     values: [20, 60, 100]
-  learning_rate:
-    values: [0.001, 0.01, 0.05]
+  #learning_rate:
+    #values: [0.001, 0.01, 0.05]
   n_hidden1:
     values: [32, 128, 256]
   n_hidden2:
     values: [32, 128, 256]
   optimizer:
-    values: ["SDG", "Adam"]
+    values: ["Adam"]
+    #values: ["SDG", "Adam"]
   Net:
     values: ["Net1", "Net2"]
     #distribution: int_uniform
