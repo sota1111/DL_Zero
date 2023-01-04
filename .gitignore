@@ -1,4 +1,6 @@
-saitan/pythonlibs*
+saitan/pythonlibs/images*
+saitan/pythonlibs/torch_lib_wandb/__pycache__*
 saitan/data*
 saitan/wandb*
 data/MNIST*
+/home/sota/doc/DL_Zero/saitan/pythonlibs/torch_lib_wandb/__pycache__

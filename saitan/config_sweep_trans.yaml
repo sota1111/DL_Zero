@@ -1,0 +1,10 @@
+method: grid
+# grid, random, bayesから選択
+#bayesの場合, metricを記述
+metric:
+  name: test_acc
+  goal: minimize
+# goal:Maximize, Minimize, Targetから選択
+parameters:
+  optimizer:
+    values: ["SDG", "SDG_momentum", "Adagrad", "RMSprop", "Adadelta", "Adam", "AdamW"]
